@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <!-- <h1>{{ appName | async }}</h1> -->
+
+      <h1>{{ appName }}</h1>
+      <input type="text" #name>
+      
+      <button class="btn btn-primary" (click)="onSave(name.value)">Add Person</button>
+      <button class="btn btn-primary" (click)="onGet()">Get Person</button>
+       <button class="btn btn-primary" (click)="onUpdate()">Update Person</button>
+      <button class="btn btn-primary" (click)="onDelete()">Delete Person</button>
+      <hr>
+      <ul class="list-group" *ngFor="let server of servers">
+        <li class="list-group-item">{{ server.firstName }} (ID: {{ server.lastName }})</li>
+      </ul>
+    </div>
+  </div>
+</div>
